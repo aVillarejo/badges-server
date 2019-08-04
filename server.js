@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import db from "./database";
 
 //* App
 const app = express();
@@ -16,6 +17,7 @@ app.use(express.json());
 app.get("/api", (req, res) => {
   res.send("Hello World!!");
 });
+app.use("/api/badges", require("./routes/badge.routes"));
 
 //* Starting de Server
 app.listen(app.get("PORT"), () => {
