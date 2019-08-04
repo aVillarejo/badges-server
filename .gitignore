@@ -1,0 +1,10 @@
+node_modules/
+
+# misc
+yarn.lock
+
+## cliente app
+badgesApp/
+
+#dev config
+.babelrc
